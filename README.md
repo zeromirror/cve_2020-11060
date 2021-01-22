@@ -6,12 +6,12 @@
 
 ## Poc目录结构
 
--   `Poc.py`  ：攻击脚本）
+-   `Poc.py`  ：攻击脚本
 -   `crcChanger` ： 用于构造特定crc的文件，在`Poc.py`中被调用
 -   `payload` 
     -   `payload` ： 拥有一块不被压缩的phpwebshell，用于攻击的最后步骤
     -   `a` ： 动态生成，根据数据库dump的结果，生成相应的a文件，起到打开`<?=/*`的作用
--   `tmp_data`
+-   `tmp_data`：运行时生成，日志信息和临时文件
     -   `log` ： 攻击的日志信息
     -   `wire`  ： 发出的`requests请求`的相关数据
     -   `xxx.html` ：每一次`requests`返回的response相关的信息
